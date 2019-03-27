@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<ruleset name="myruleset"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+  <description>DeepCode ruleset.</description>
+ 
+  <!-- Rule sets and excluded rules -->
+  <rule ref="category/java/bestpractices.xml">
+  </rule> 
+  <rule ref="category/java/codestyle.xml">
+    <exclude name="VariableNamingConventions"/>
+    <exclude name="MethodNamingConventions"/>
+  </rule> 
+  <rule ref="category/java/design.xml">
+    <exclude name="LoosePackageCoupling"/>
+    <exclude name="NcssConstructorCount"/>
+  </rule>
+  <rule ref="category/java/documentation.xml">
+  </rule>
+  <rule ref="category/java/errorprone.xml">
+      <exclude name="ReturnEmptyArrayRatherThanNull"/>
+  </rule>
+  <rule ref="category/java/multithreading.xml">
+  </rule>
+  <rule ref="category/java/performance.xml">
+    <exclude name="AvoidFileStream"/>
+  </rule>
+  
+  <!-- Remove parameterized rule messages. -->
+  <rule ref="category/java/bestpractices.xml/ArrayIsStoredDirectly" message="The user-supplied array is stored directly"></rule>
+  <rule ref="category/java/bestpractices.xml/AvoidReassigningParameters" message="Avoid reassigning parameters"></rule>
+  <rule ref="category/java/bestpractices.xml/AvoidUsingHardCodedIP" message="Do not hard code the IP address"></rule>
+  <rule ref="category/java/bestpractices.xml/LooseCoupling" message="Avoid using implementation types, use the interface instead"></rule>
+  <rule ref="category/java/bestpractices.xml/MethodReturnsInternalArray" message="Return value may expose an internal array"></rule>
+  <rule ref="category/java/bestpractices.xml/SystemPrintln" message="Consider usage of a Logger"></rule>
+  <rule ref="category/java/bestpractices.xml/UnusedFormalParameter" message="Avoid unused parameters "></rule>
+  <rule ref="category/java/bestpractices.xml/UnusedImports" message="Avoid unused imports"></rule>
+  <rule ref="category/java/bestpractices.xml/UnusedLocalVariable" message="Avoid unused local variables"></rule>
+  <rule ref="category/java/bestpractices.xml/UnusedPrivateField" message="Avoid unused private fields"></rule>
+  <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod" message="Avoid unused private methods"></rule>
+  
+  <rule ref="category/java/codestyle.xml/MethodArgumentCouldBeFinal" message="Parameter is not assigned and could be declared final"></rule>
+  <rule ref="category/java/codestyle.xml/DuplicateImports" message="Avoid duplicate imports"></rule>
+  <rule ref="category/java/codestyle.xml/LocalVariableCouldBeFinal" message="Local variable could be declared final"></rule>
+  <rule ref="category/java/codestyle.xml/LongVariable" message="Avoid excessively long variable names"></rule>
+  <rule ref="category/java/codestyle.xml/ShortClassName" message="Avoid short class names"></rule>
+  <rule ref="category/java/codestyle.xml/ShortVariable" message="Avoid variables with short names"></rule>
+  <rule ref="category/java/codestyle.xml/UnnecessaryFullyQualifiedName" message="Fully qualified name not necessary because of imports"></rule>
+  <rule ref="category/java/codestyle.xml/UnnecessaryLocalBeforeReturn" message="Consider simply returning the value vs storing it in local variable"></rule>
+
+  <rule ref="category/java/design.xml/CyclomaticComplexity" message="High cyclomatic complexity"></rule>
+  <rule ref="category/java/design.xml/DataClass" message="Class is suspected to be a Data Class"></rule>
+  <rule ref="category/java/design.xml/ImmutableField" message="Private field could be made final; it is only initialized in the declaration or constructor"></rule>
+  <rule ref="category/java/design.xml/NcssCount" message="High NCSS line count"></rule>
+  <rule ref="category/java/design.xml/NPathComplexity" message="High NPATH complexity"></rule>
+  <rule ref="category/java/design.xml/SingularField" message="Could perhaps be replaced by a local variable"></rule>
+
+  <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals" message="String literal appears multiple times in this file"></rule>
+  <rule ref="category/java/errorprone.xml/AvoidFieldNameMatchingMethodName" message="Field has the same name as a method"></rule>
+  <rule ref="category/java/errorprone.xml/CloseResource" message="Ensure that resources are closed after use"></rule>
+  <rule ref="category/java/errorprone.xml/ConstructorCallsOverridableMethod" message="Overridable called during object construction"></rule>
+  <rule ref="category/java/errorprone.xml/DataflowAnomalyAnalysis" message="Found UR/DU/DD-anomaly"></rule>
+  
+  <rule ref="category/java/performance.xml/ConsecutiveLiteralAppends" message="StringBuffer (or StringBuilder).append is called consecutive times with literal Strings. Use a single append with a single combined String"></rule>
+  <rule ref="category/java/performance.xml/InsufficientStringBufferDeclaration" message="StringBuffer constructor is initialized with insufficient size for number of appended characters"></rule>
+  <rule ref="category/java/performance.xml/RedundantFieldInitializer" message="Avoid using redundant field initializer"></rule>
+
+</ruleset>
+
